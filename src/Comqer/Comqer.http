@@ -1,0 +1,11 @@
+@Comqer_HostAddress = http://localhost:5130
+
+GET {{Comqer_HostAddress}}/query?input=queryInput
+Accept: application/json
+
+###
+
+POST {{Comqer_HostAddress}}/command?input=commandInput
+Accept: application/json
+
+###
