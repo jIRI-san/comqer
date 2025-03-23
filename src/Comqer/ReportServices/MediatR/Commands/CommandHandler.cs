@@ -1,6 +1,6 @@
 using MediatR;
 
-namespace Comqer.WorkerServices.MediatR.Commands;
+namespace Comqer.ReportServices.MediatR.Commands;
 
 public class CommandHandler : IRequestHandler<Command, string> {
     private readonly ILogger<CommandHandler> _logger;

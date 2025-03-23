@@ -1,8 +1,8 @@
 using Comqer.Features;
 using Comqer.Features.Api;
-using Comqer.WorkerServices;
-using Comqer.WorkerServices.MediatR;
-using Comqer.WorkerServices.Plain;
+using Comqer.ReportServices;
+using Comqer.ReportServices.MediatR;
+using Comqer.ReportServices.Plain;
 using Microsoft.FeatureManagement;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -18,9 +18,9 @@ builder.Logging.AddSimpleConsole(options => {
 });
 
 // register some worker services classes
-builder.Services.AddSingleton<IWorkerServiceSelector, WorkerServiceSelector>();
-builder.Services.AddSingleton<PlainWorkerService>();
-builder.Services.AddSingleton<MediatrWorkerService>();
+builder.Services.AddSingleton<IReportServiceSelector, ReportServiceSelector>();
+builder.Services.AddSingleton<PlainReportService>();
+builder.Services.AddSingleton<MediatrReportService>();
 
 // register features manually, because this is not Autofac and we cannot
 // register all implementations of interface in assembly, it seems...

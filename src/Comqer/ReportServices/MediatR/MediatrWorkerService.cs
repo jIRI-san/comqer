@@ -1,14 +1,14 @@
 using System.Drawing;
 using MediatR;
 
-namespace Comqer.WorkerServices.MediatR;
+namespace Comqer.ReportServices.MediatR;
 
-internal class MediatrWorkerService : IWorkerService {
+internal class MediatrReportService : IReportService {
   public const string FeatureToggle = "WorkerService.MediatR";
 
   private readonly IMediator _mediator;
 
-  public MediatrWorkerService(IMediator mediator) {
+  public MediatrReportService(IMediator mediator) {
     _mediator = mediator;
   }
 

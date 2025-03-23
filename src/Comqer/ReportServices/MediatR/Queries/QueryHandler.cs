@@ -1,4 +1,4 @@
-using Comqer.WorkerServices.MediatR.Queries;
+using Comqer.ReportServices.MediatR.Queries;
 using MediatR;
 
 namespace Comqer.Features.MediatR.Queries;

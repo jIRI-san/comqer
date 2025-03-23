@@ -1,13 +1,13 @@
-namespace Comqer.WorkerServices.Plain;
+namespace Comqer.ReportServices.Plain;
 
-internal class PlainWorkerService : IWorkerService {
-  public const string FeatureToggle = "WorkerService.Plain";
+internal class PlainReportService : IReportService {
+  public const string FeatureToggle = "ReportService.Plain";
 
-  private readonly ILogger<PlainWorkerService> _logger;
+  private readonly ILogger<PlainReportService> _logger;
   private readonly SemaphoreSlim _commandSemaphore = new(1, 1);
   private readonly SemaphoreSlim _querySemaphore = new(1, 1);
 
-  public PlainWorkerService(ILogger<PlainWorkerService> logger) {
+  public PlainReportService(ILogger<PlainReportService> logger) {
     _logger = logger;
   }
 

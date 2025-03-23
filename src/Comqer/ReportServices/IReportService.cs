@@ -1,6 +1,6 @@
-namespace Comqer.WorkerServices;
+namespace Comqer.ReportServices;
 
-public interface IWorkerService {
+public interface IReportService {
     Task<string> Command(string input);
     Task<string> Query(string input);
 }

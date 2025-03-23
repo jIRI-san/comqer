@@ -1,6 +1,6 @@
 using MediatR;
 
-namespace Comqer.WorkerServices.MediatR.Queries;
+namespace Comqer.ReportServices.MediatR.Queries;
 
 public class Query(string input) : IRequest<string> {
   private readonly string _input = input;

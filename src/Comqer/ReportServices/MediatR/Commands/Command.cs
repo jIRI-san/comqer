@@ -1,6 +1,6 @@
 using MediatR;
 
-namespace Comqer.WorkerServices.MediatR.Commands;
+namespace Comqer.ReportServices.MediatR.Commands;
 
 public class Command(string input) : IRequest<string> {
   private readonly string _input = input;

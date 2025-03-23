@@ -1,4 +1,4 @@
-using Comqer.WorkerServices;
+using Comqer.ReportServices;
 using MediatR;
 using Microsoft.FeatureManagement;
 
@@ -7,11 +7,11 @@ namespace Comqer.Features.Api;
 internal class ApiFeature : IFeatureRegistration {
     public const string ApiFeatureToggle = "Api";
 
-    private readonly IWorkerServiceSelector _workerServiceSelector;
+    private readonly IReportServiceSelector _workerServiceSelector;
     private readonly IFeatureManager _featureManager;
     private readonly ILogger<ApiFeature> _logger;
 
-    public ApiFeature(IWorkerServiceSelector workerServiceSelector, IFeatureManager featureManager, ILogger<ApiFeature> logger) {
+    public ApiFeature(IReportServiceSelector workerServiceSelector, IFeatureManager featureManager, ILogger<ApiFeature> logger) {
         _workerServiceSelector = workerServiceSelector;
         _featureManager = featureManager;
         _logger = logger;
